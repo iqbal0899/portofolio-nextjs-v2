@@ -260,6 +260,45 @@
   }
 }
 
+.cvButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 90%;
+
+margin-top: 30px;
+  padding: 13px 15px;
+
+  color: #ffffff;
+  background: #173b5b;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cvButton:hover {
+  background: #ff5147;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 25px rgba(255, 59, 48, 0.25);
+}
+
+.cvButton:active {
+  transform: translateY(0);
+}
+
 /* =========================
    MOBILE KECIL
 ========================= */
@@ -277,5 +316,19 @@
     justify-content: center;
 
     flex-wrap: wrap;
+  }
+
+  .cvButton {
+    width: auto;
+
+    margin-top: 0;
+
+    padding: 9px 14px;
+
+    font-size: 12px;
+  }
+
+  .cvButton span {
+    font-size: 16px;
   }
 }

@@ -8,7 +8,7 @@ export default function Footer() {
 
         {/* Brand */}
         <div className={styles.footerBrand}>
-          <h2>Iqbal<span>.</span></h2>
+          <h2>Muhammad Iqbal<span>.</span></h2>
 
           <p>
             Web Developer yang berfokus pada pembuatan website

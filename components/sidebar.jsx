@@ -6,6 +6,7 @@ export default function Sidebar() {
   return (
     <aside className={styles.sidebar}>
 
+      {/* Profile */}
       <div className={styles.profile}>
         <div className={styles.profileImage}>
           <Image
@@ -24,12 +25,23 @@ export default function Sidebar() {
         <p>Web Developer</p>
       </div>
 
+      {/* Navigation */}
       <nav className={styles.sidebarNav}>
         <Link href="#home">Home</Link>
         <Link href="#about">About</Link>
         <Link href="#projects">Projects</Link>
         <Link href="#contact">Contact</Link>
       </nav>
+
+      {/* Download CV */}
+      <a
+        href="/cv-muhammad-iqbal.pdf"
+        download="CV Iqbal Terbaru.pdf"
+        className={styles.cvButton}
+      >
+        Download CV
+      </a>
+
     </aside>
   );
 }
