@@ -36,7 +36,7 @@ export default function Sidebar() {
       {/* Download CV */}
       <a
         href="/cv-muhammad-iqbal.pdf"
-        download="CV Iqbal Terbaru.pdf"
+        download="cv-muhammad-iqbal.pdf"
         className={styles.cvButton}
       >
         Download CV
