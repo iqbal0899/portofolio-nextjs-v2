@@ -1,8 +1,8 @@
 .hero {
   position: relative;
-
   width: 100%;
   min-height: 100vh;
+  min-height: 100svh;
 
   display: flex;
   align-items: center;
@@ -11,42 +11,21 @@
   background-color: #102f49;
   background-image: url("/road.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
 
   overflow: hidden;
+  box-sizing: border-box;
 }
-
-/*
-  Overlay gelap agar teks tetap mudah dibaca
-*/
-
-/* .overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.48),
-      rgba(0, 0, 0, 0.68)
-    );
-} */
-
-/*
-  Content
-*/
 
 .content {
   position: relative;
-
   z-index: 2;
 
   width: min(700px, 85%);
+  margin: 0 auto;
 
   text-align: center;
-
   color: white;
 
   animation: fadeUp 1s ease forwards;
@@ -58,7 +37,7 @@
   margin-bottom: 13px;
 
   font-size: 10px;
-
+  line-height: 1.5;
   letter-spacing: 4px;
 
   color: rgba(255, 255, 255, 0.55);
@@ -67,12 +46,10 @@
 .content h2 {
   margin: 0 0 14px;
 
-  font-size: clamp(50px, 7vw, 78px);
-
+  font-size: clamp(3.1rem, 7vw, 4.875rem);
   line-height: 1;
 
   font-weight: 500;
-
   letter-spacing: -2px;
 
   text-shadow:
@@ -80,12 +57,12 @@
 }
 
 .content p {
+  width: 100%;
   max-width: 620px;
 
   margin: 0 auto;
 
-  font-size: clamp(16px, 2vw, 21px);
-
+  font-size: clamp(1rem, 2vw, 1.3rem);
   line-height: 1.75;
 
   color: rgba(255, 255, 255, 0.9);
@@ -96,23 +73,17 @@
 
 .content strong {
   color: white;
-
   font-weight: 700;
 }
 
-/*
-  Learn more
-*/
-
 .learnMore {
   display: inline-flex;
-
   align-items: center;
+  justify-content: center;
 
   gap: 8px;
 
   margin-top: 28px;
-
   padding: 9px 15px;
 
   color: rgba(255, 255, 255, 0.58);
@@ -120,6 +91,7 @@
   text-decoration: none;
 
   font-size: 11px;
+  line-height: 1.4;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
@@ -131,9 +103,7 @@
 
 .learnMore:hover {
   color: white;
-
   border-color: white;
-
   gap: 12px;
 }
 
@@ -153,57 +123,173 @@
   }
 }
 
-/*
-  Tablet
-*/
+@media (min-width: 1200px) {
+  .content {
+    width: min(720px, 80%);
+  }
+
+  .content h2 {
+    font-size: clamp(4rem, 6vw, 5.2rem);
+  }
+
+  .content p {
+    font-size: 1.2rem;
+  }
+}
 
 @media (max-width: 900px) {
+  .hero {
+    min-height: 100svh;
+    background-position: center center;
+  }
+
   .content {
     width: 88%;
   }
 
   .content h2 {
-    font-size: clamp(48px, 12vw, 70px);
+    font-size: clamp(3rem, 12vw, 4.4rem);
+    letter-spacing: -2px;
   }
 
   .content p {
+    max-width: 600px;
     font-size: 17px;
     line-height: 1.65;
   }
 }
 
-/*
-  Mobile
-*/
+@media (max-width: 768px) {
+  .hero {
+    min-height: calc(100svh - 64px);
+  }
+
+  .content {
+    width: min(90%, 650px);
+  }
+
+  .smallText {
+    margin-bottom: 11px;
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .content h2 {
+    margin-bottom: 14px;
+    font-size: clamp(2.8rem, 11vw, 4rem);
+    line-height: 1.02;
+  }
+
+  .content p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .learnMore {
+    margin-top: 25px;
+  }
+}
 
 @media (max-width: 500px) {
   .hero {
+    min-height: calc(100svh - 60px);
+
     background-position: 58% center;
   }
 
   .content {
-    width: 88%;
+    width: calc(100% - 40px);
+    max-width: 420px;
   }
 
   .smallText {
-    font-size: 8px;
+    margin-bottom: 12px;
 
+    font-size: 8px;
     letter-spacing: 2.5px;
   }
 
   .content h2 {
     margin-bottom: 15px;
 
-    font-size: 52px;
+    font-size: clamp(2.7rem, 14vw, 3.3rem);
+    line-height: 1.02;
+    letter-spacing: -1.5px;
   }
 
   .content p {
     font-size: 15px;
-
     line-height: 1.65;
   }
 
   .learnMore {
     margin-top: 22px;
+    padding: 9px 13px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    min-height: calc(100svh - 56px);
+
+    background-position: 60% center;
+  }
+
+  .content {
+    width: calc(100% - 30px);
+  }
+
+  .smallText {
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .content h2 {
+    font-size: clamp(2.4rem, 14vw, 3rem);
+    letter-spacing: -1px;
+  }
+
+  .content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .learnMore {
+    margin-top: 20px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    min-height: 600px;
+    padding: 80px 0;
+  }
+
+  .content h2 {
+    font-size: clamp(2.5rem, 9vw, 3.8rem);
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+}
+
+@media (hover: none) {
+  .learnMore:hover {
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.58);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content {
+    animation: none;
+  }
+
+  .learnMore {
+    transition: none;
   }
 }

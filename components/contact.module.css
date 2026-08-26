@@ -1,105 +1,95 @@
 .contact {
+  width: 100%;
   min-height: 100vh;
-
   padding: 90px 8% 30px;
-
   background: #102f49;
-
   color: white;
+  box-sizing: border-box;
 }
 
 .heading {
-  margin-bottom: 45px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 45px;
 }
 
 .heading span {
+  display: block;
   font-size: 10px;
-
   letter-spacing: 3px;
-
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.45);
 }
 
 .heading h2 {
   margin: 8px 0 12px;
-
-  font-size: 42px;
-
+  font-size: clamp(2rem, 5vw, 2.6rem);
   font-weight: 500;
+  line-height: 1.15;
 }
 
 .heading p {
   margin: 0;
-
+  max-width: 650px;
   color: rgba(255, 255, 255, 0.6);
-
   font-size: 14px;
+  line-height: 1.7;
 }
 
 .wrapper {
-  display: grid;
-
-  grid-template-columns: 0.8fr 1.5fr;
-
-  gap: 60px;
-
+  width: 100%;
   max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.5fr);
+  gap: 60px;
+  box-sizing: border-box;
 }
 
 .info {
   display: flex;
-
   flex-direction: column;
-
   gap: 25px;
 }
 
 .infoItem {
   display: flex;
-
   align-items: flex-start;
-
   gap: 15px;
-
   padding-bottom: 20px;
-
-  border-bottom: 1px solid
-    rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .infoItem svg {
+  width: 20px;
+  height: 20px;
   color: #8eacc0;
-
   margin-top: 2px;
+  flex-shrink: 0;
 }
 
 .infoItem div {
+  min-width: 0;
   display: flex;
-
   flex-direction: column;
-
   gap: 5px;
 }
 
 .infoItem span {
   font-size: 9px;
-
   letter-spacing: 1.5px;
-
   text-transform: uppercase;
-
   color: rgba(255, 255, 255, 0.4);
 }
 
 .infoItem a,
 .infoItem p {
   margin: 0;
-
   color: rgba(255, 255, 255, 0.8);
-
   text-decoration: none;
-
   font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .infoItem a:hover {
@@ -108,74 +98,68 @@
 
 .social {
   display: flex;
-
+  align-items: center;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
 .social a {
   width: 38px;
   height: 38px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   color: rgba(255, 255, 255, 0.65);
-
-  border: 1px solid
-    rgba(255, 255, 255, 0.15);
-
-  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  box-sizing: border-box;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .social a:hover {
   color: white;
-
   border-color: white;
-
   transform: translateY(-3px);
 }
 
-/* FORM */
-
 .form {
+  width: 100%;
   display: flex;
-
   flex-direction: column;
-
   gap: 13px;
+  box-sizing: border-box;
 }
 
 .row {
+  width: 100%;
   display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 13px;
 }
 
 .form input,
 .form textarea {
   width: 100%;
-
+  min-width: 0;
   padding: 14px 15px;
-
   color: white;
-
-  background:
-    rgba(255, 255, 255, 0.05);
-
-  border: 1px solid
-    rgba(255, 255, 255, 0.12);
-
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
   outline: none;
-
+  box-sizing: border-box;
+  font-family: inherit;
   font-size: 12px;
-
+  line-height: 1.5;
   resize: vertical;
-
   transition: border 0.2s ease;
+}
+
+.form textarea {
+  min-height: 130px;
 }
 
 .form input::placeholder,
@@ -185,25 +169,21 @@
 
 .form input:focus,
 .form textarea:focus {
-  border-color:
-    rgba(255, 255, 255, 0.45);
+  border-color: rgba(255, 255, 255, 0.45);
 }
 
 .form button {
   align-self: flex-start;
-
+  min-height: 44px;
   padding: 12px 22px;
-
   color: #173b5b;
-
   background: white;
-
   border: none;
-
+  border-radius: 4px;
+  font-family: inherit;
   font-size: 11px;
-
+  font-weight: 600;
   cursor: pointer;
-
   transition:
     background 0.2s ease,
     transform 0.2s ease;
@@ -211,47 +191,196 @@
 
 .form button:hover {
   background: #dce7ed;
-
   transform: translateY(-2px);
 }
 
-/* .footer {
-  margin-top: 80px;
+@media (max-width: 1000px) {
+  .contact {
+    padding: 80px 6% 30px;
+  }
 
-  padding-top: 20px;
+  .heading {
+    margin-bottom: 40px;
+  }
 
-  text-align: center;
+  .wrapper {
+    gap: 40px;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.4fr);
+  }
 
-  border-top: 1px solid
-    rgba(255, 255, 255, 0.1);
+  .info {
+    gap: 20px;
+  }
 }
-
-.footer p {
-  margin: 0;
-
-  color: rgba(255, 255, 255, 0.3);
-
-  font-size: 9px;
-} */
 
 @media (max-width: 800px) {
   .contact {
+    min-height: auto;
     padding: 70px 7% 25px;
+  }
+
+  .heading {
+    margin-bottom: 35px;
+  }
+
+  .heading span {
+    font-size: 9px;
+    letter-spacing: 2.5px;
   }
 
   .heading h2 {
     font-size: 34px;
   }
 
+  .heading p {
+    font-size: 13px;
+  }
+
   .wrapper {
     grid-template-columns: 1fr;
-
     gap: 45px;
+  }
+
+  .info {
+    gap: 18px;
+  }
+
+  .infoItem {
+    padding-bottom: 17px;
+  }
+
+  .form {
+    gap: 12px;
   }
 }
 
 @media (max-width: 500px) {
+  .contact {
+    padding: 60px 24px 25px;
+  }
+
+  .heading {
+    margin-bottom: 30px;
+  }
+
+  .heading span {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .heading h2 {
+    margin: 7px 0 10px;
+    font-size: clamp(2rem, 10vw, 2.5rem);
+  }
+
+  .heading p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .wrapper {
+    gap: 35px;
+  }
+
+  .info {
+    gap: 15px;
+  }
+
+  .infoItem {
+    gap: 12px;
+    padding-bottom: 15px;
+  }
+
+  .infoItem svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .infoItem span {
+    font-size: 8px;
+    letter-spacing: 1.3px;
+  }
+
+  .infoItem a,
+  .infoItem p {
+    font-size: 12px;
+  }
+
+  .social {
+    gap: 10px;
+  }
+
+  .social a {
+    width: 36px;
+    height: 36px;
+  }
+
   .row {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form input,
+  .form textarea {
+    padding: 13px 14px;
+    font-size: 12px;
+  }
+
+  .form textarea {
+    min-height: 120px;
+  }
+
+  .form button {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact {
+    padding: 50px 18px 22px;
+  }
+
+  .heading {
+    margin-bottom: 25px;
+  }
+
+  .heading h2 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 11px;
+  }
+
+  .wrapper {
+    gap: 30px;
+  }
+
+  .infoItem {
+    gap: 10px;
+  }
+
+  .infoItem a,
+  .infoItem p {
+    font-size: 11px;
+  }
+
+  .form input,
+  .form textarea {
+    padding: 12px;
+    font-size: 11px;
+  }
+
+  .form button {
+    font-size: 10px;
+  }
+}
+
+@media (hover: none) {
+  .social a:hover,
+  .form button:hover {
+    transform: none;
   }
 }

@@ -7,33 +7,68 @@ const projects = [
   {
     number: "01",
     title: "Chill Streaming",
+
     description:
       "Aplikasi streaming film dengan fitur login, register, pencarian film, filter genre, detail film, dan sistem daftar tontonan.",
+
+    github:
+      "https://github.com/iqbal0899/Fullstack-PostgreSQL.git",
+
+    live:
+      "/project-not-found",
+
     technologies: [
       "React",
       "Node.js",
       "Express",
-      "PostgreSQL",
+      "Knex.js",
+      "JWT",
+      "Middleware",
+      "Node Mailer",
+      "MySQL",
     ],
   },
+
   {
     number: "02",
-    title: "Portfolio Website",
-    description:
-      "Website portfolio pribadi yang menampilkan profile, skills, project, dan contact dengan desain modern dan responsive.",
-    technologies: [
-      "Next.js",
-      "React",
-      "CSS",
-    ],
-  },
-  {
-    number: "03",
     title: "To-Do List",
+
     description:
       "Aplikasi manajemen tugas dengan fitur menambahkan task, status selesai, deadline, waktu, dan penanda overdue.",
+
+    github:
+      "https://github.com/iqbal0899/To-Do-List.git",
+
+    live:
+      "https://to-do-list-blond-kappa-90.vercel.app/",
+
     technologies: [
       "HTML",
+      "CSS",
+      "JavaScript",
+    ],
+  },
+
+  {
+    number: "03",
+    title: "App-Kasir",
+
+    description:
+      "Aplikasi manajemen penjualan toko kopi dengan fitur role user, filtering by category, produk, transaksi, dan laporan.",
+
+    github:
+      "https://github.com/iqbal0899/kasir-nextjs.git",
+
+    live:
+      '/project-not-found',
+
+    technologies: [
+      "Next.js",
+      "JWT",
+      "Middleware",
+      "React",
+      "Prisma",
+      "Neon PostgreSQL",
       "CSS",
       "JavaScript",
     ],
@@ -70,11 +105,25 @@ export default function Projects() {
               </span>
 
               <div className={styles.links}>
-                <a href="#" aria-label="Github">
+                {/* GitHub */}
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Github ${project.title}`}
+                  title="View Github"
+                >
                   <FaGithub size={17} />
                 </a>
 
-                <a href="#" aria-label="Live demo">
+                {/* Live Project */}
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Live demo ${project.title}`}
+                  title="Live Demo"
+                >
                   <ExternalLink size={17} />
                 </a>
               </div>

@@ -31,6 +31,7 @@ const skills = [
       "Express.js",
       "REST API",
       "JWT",
+      "Middleware",
     ],
   },
   {
@@ -42,19 +43,17 @@ const skills = [
       "MySQL",
       "PostgreSQL",
       "Neon",
-      "SQL",
     ],
   },
   {
     icon: Palette,
-    title: "Tools & Design",
+    title: "Tools",
     description:
       "Tools yang digunakan untuk development.",
     items: [
       "Git",
       "GitHub",
       "VS Code",
-      "Figma",
     ],
   },
 ];
