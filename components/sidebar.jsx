@@ -22,7 +22,7 @@ export default function Sidebar() {
           Muhammad Iqbal<span>.</span>
         </h2>
 
-        <p>Web Developer</p>
+        <p>IT</p>
       </div>
 
       {/* Navigation */}

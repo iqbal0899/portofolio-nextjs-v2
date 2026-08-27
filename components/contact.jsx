@@ -15,7 +15,6 @@ export default function Contact() {
         <h2>Let's Talk</h2>
 
         <p>
-          Punya project atau ingin bekerja sama?
           Jangan ragu untuk menghubungi saya.
         </p>
       </div>
@@ -31,8 +30,8 @@ export default function Contact() {
             <div>
               <span>Email</span>
 
-              <a href="mailto:your@email.com">
-                your@email.com
+              <a href="mailto:iqbalshl08@email.com">
+                iqbalshl08@email.com
               </a>
             </div>
           </div>
@@ -51,14 +50,14 @@ export default function Contact() {
           <div className={styles.social}>
 
             <a
-              href="#"
+              href="https://github.com/iqbal0899"
               aria-label="Github"
             >
               <FaGithub size={18} />
             </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/muhammad-iqbal-a6278a223?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
               aria-label="LinkedIn"
             >
               <FaLinkedinIn size={18} />

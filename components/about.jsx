@@ -13,22 +13,20 @@ export default function About() {
         <div className={styles.text}>
           <p className={styles.intro}>
             Halo! Saya <strong>Muhammad Iqbal</strong>, seorang
-            Fullstack Developer yang memiliki ketertarikan dalam
-            membangun aplikasi web modern, responsif, dan mudah
-            digunakan.
+            IT yang mencakup Fullstack Dev, IT Networking, IT Support & Helpdesk.
           </p>
 
           <p>
-            Saya senang mengubah ide menjadi sebuah website yang
+             Dalam proses perjalanan, saya suka mencoba hal-hal baru seperti menjadi
+             IT Network & Support yang bekerja dalam menggambar TOPOLOGI yang nantinya akan
+             dikonfigurasi. Trouble Shooting HardWare dan Software.
+          </p>
+
+          <p>
+            Untuk Fullstack Developer saya senang mengubah ide menjadi sebuah website yang
             memiliki tampilan menarik sekaligus memiliki fungsi
             yang baik. Saya juga terus belajar teknologi baru
             untuk meningkatkan kemampuan dalam pengembangan web.
-          </p>
-
-          <p>
-            Dalam proses pengembangan, saya memperhatikan struktur
-            kode, performa aplikasi, responsive design, serta
-            pengalaman pengguna.
           </p>
         </div>
 
@@ -45,7 +43,7 @@ export default function About() {
             <Briefcase size={20} />
             <div>
               <span>Role</span>
-              <strong>Fullstack Developer</strong>
+              <strong>IT Staff</strong>
             </div>
           </div>
 

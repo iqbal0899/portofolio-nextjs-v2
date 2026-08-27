@@ -32,7 +32,7 @@ export default function Footer() {
           <h3>Social</h3>
 
           <a
-            href="https://github.com/"
+            href="https://github.com/iqbal0899"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -40,7 +40,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/muhammad-iqbal-a6278a223?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -48,7 +48,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://instagram.com/"
+            href="https://instagram.com/@iqballm_"
             target="_blank"
             rel="noopener noreferrer"
           >

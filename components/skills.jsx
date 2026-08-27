@@ -3,6 +3,8 @@ import {
   Server,
   Database,
   Palette,
+  Network,
+  WrenchOff,
 } from "lucide-react";
 
 import styles from "./skills.module.css";
@@ -46,14 +48,25 @@ const skills = [
     ],
   },
   {
-    icon: Palette,
-    title: "Tools",
+    icon: WrenchOff,
+    title: "Trouble Shoot",
     description:
-      "Tools yang digunakan untuk development.",
+      "Memecahkan masalah yang sering terjadi pada user.",
     items: [
-      "Git",
-      "GitHub",
-      "VS Code",
+      "Windows",
+      "Microsoft Office",
+      "Remote",
+    ],
+  },
+   {
+    icon: Network,
+    title: "Networking",
+    description:
+      "Menggambar Topologi serta konfigurasi jaringan hingga ready to use",
+    items: [
+      "Wi-Fi",
+      "Static",
+      "Meraki Cisco",
     ],
   },
 ];
@@ -70,8 +83,8 @@ export default function Skills() {
         <h2>Skills</h2>
 
         <p>
-          Teknologi dan tools yang saya gunakan
-          dalam membangun aplikasi web.
+          Teknologi yang saya gunakan
+          dalam bekerja.
         </p>
       </div>
 
