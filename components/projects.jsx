@@ -60,7 +60,7 @@ const projects = [
       "https://github.com/iqbal0899/kasir-nextjs.git",
 
     live:
-      '/project-not-found',
+      "https://kasir-nextjs-odzzoitmg-iqbal0899s-projects.vercel.app/auth/login",
 
     technologies: [
       "Next.js",
