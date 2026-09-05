@@ -14,11 +14,9 @@ export default function Hero() {
         <h2>Hello!</h2>
 
         <p>
-          My name is{" "}
+          Nama saya{" "}
           <strong>Muhammad Iqbal</strong>, and I'm a
-          Fullstack Developer passionate about creating
-          modern, responsive, and user-friendly web
-          applications.
+          dan saya seorang Fullstack Developer yang sangat antusias dalam membuat aplikasi web modern, responsif, dan ramah pengguna.
         </p>
 
         <a href="#about" className={styles.learnMore}>
