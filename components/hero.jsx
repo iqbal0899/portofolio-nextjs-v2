@@ -15,7 +15,7 @@ export default function Hero() {
 
         <p>
           Nama saya{" "}
-          <strong>Muhammad Iqbal</strong>, and I'm a
+          <strong>Muhammad Iqbal</strong>,
           dan saya seorang Fullstack Developer yang sangat antusias dalam membuat aplikasi web modern, responsif, dan ramah pengguna.
         </p>
 
